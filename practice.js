@@ -23,7 +23,7 @@ class Person {
   }
 
   checkIfPasswordIsNotTooWeak() {
-    let allLogins = ["password", "tajnehaslo", "haslo", "secret"];
+    let allPasswords = ["password", "tajnehaslo", "haslo", "secret"];
     let characters = "!@#$%^&*()_-+=[{]}|;:',<.>/?`~";
     let bigLettersCheck = 0;
     let uniqueCharacterCheck = 0;
@@ -58,8 +58,8 @@ class Person {
       return messages.error[2];
     }
 
-    for (let i = 0; i < allLogins.length; i++) {
-      if (this.password === allLogins[i]) {
+    for (let i = 0; i < allPasswords.length; i++) {
+      if (this.password === allPasswords[i]) {
         return messages.error[0];
       } else {
         return messages.succes;
