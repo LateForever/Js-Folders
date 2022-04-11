@@ -11,8 +11,8 @@ class Person {
 
   generateID() {
     let choice;
-    let result = "";
-    let idSign = "id_";
+    let result = "",
+      idSign = "id_";
 
     for (let i = 0; i < 16; i++) {
       choice = Math.floor(Math.random() * 1 + i);
@@ -23,18 +23,18 @@ class Person {
   }
 
   checkIfPasswordIsNotTooWeak() {
-    let allPasswords = ["password", "tajnehaslo", "haslo", "secret"];
-    let characters = "!@#$%^&*()_-+=[{]}|;:',<.>/?`~";
-    let bigLettersCheck = 0;
-    let uniqueCharacterCheck = 0;
-    let messages = {
-      succes: "Password is strong",
-      error: [
-        "Password is too weak",
-        "Password needs to have one big letter",
-        "Password needs to have one special character",
-      ],
-    };
+    let allPasswords = ["password", "tajnehaslo", "haslo", "secret"],
+      characters = "!@#$%^&*()_-+=[{]}|;:',<.>/?`~",
+      bigLettersCheck = 0,
+      uniqueCharacterCheck = 0,
+      messages = {
+        succes: "Password is strong",
+        error: [
+          "Password is too weak",
+          "Password needs to have one big letter",
+          "Password needs to have one special character",
+        ],
+      };
 
     for (let i = 0; i < this.password.length; i++) {
       if (this.password[i] === this.password[i].toUpperCase()) {
